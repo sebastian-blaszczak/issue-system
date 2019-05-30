@@ -5,10 +5,11 @@ import system.issue.Issue;
 import java.io.File;
 import java.util.List;
 
-public class DefaultIssueFileExporter extends IssueExporter<File>{
+public class IssueFileExporter extends IssueExporter<File>{
+
 
     @Override
-    public List<Issue> export(File obj) {
-        return super.export(obj);
+    public File export(List<Issue> objectToExport) {
+        return null;
     }
 }

@@ -1,7 +1,9 @@
 package system.issue;
 
+import system.commands.interfaces.Command;
+import system.issue.comments.Comment;
+import system.issue.wrapper.IssueWrapper;
 import system.observers.Observer;
-import system.observers.ObserverMethod;
 import system.observers.Publisher;
 import system.observers.Subject;
 import system.users.User;
@@ -13,7 +15,7 @@ import java.util.Optional;
 
 public class Issue implements Publisher, Subject {
 
-    private static Integer idGenerator = 0;
+    private static Integer idGenerator = -1;
     private final int id;
     private final String tittle;
     private String description;
@@ -21,10 +23,11 @@ public class Issue implements Publisher, Subject {
     private User assignUser;
     private IssueType type;
     private IssuePriority priority;
+    private List<Comment> commentList;
 
     private List<Observer> observerList;
 
-    private Issue(IssueBuilder builder) {
+    protected Issue(IssueBuilder builder) {
         Issue.idGenerator += 1;
         this.id = idGenerator;
         this.tittle = builder.title;
@@ -34,6 +37,7 @@ public class Issue implements Publisher, Subject {
         this.type = builder.type;
         this.priority = builder.priority;
         this.observerList = new ArrayList<>();
+        this.commentList = new ArrayList<>();
     }
 
     public void changeDescription(String newDescription) {
@@ -50,7 +54,17 @@ public class Issue implements Publisher, Subject {
         Observer observer = foundObserver.orElse(p -> {
             System.out.println("Observer not found");
         });
-        observer.notify(() -> System.out.println("You have been assigned to issue id = [" + this.id + "]"));
+        observer.notify(() -> {
+            System.out.println("User [" + user.getName() + "] is assigned to issue id [" + id + "]");
+
+            return new IssueWrapper(new IssueBuilder()
+                    .title(tittle)
+                    .description(description)
+                    .creator(creator)
+                    .assignUser(assignUser)
+                    .type(type)
+                    .priority(priority));
+        });
     }
 
     public static IssueBuilder builder() {
@@ -78,10 +92,30 @@ public class Issue implements Publisher, Subject {
         this.observerList.stream()
                 .forEach(observer -> {
                     observer.notify(() -> {
-                        System.out.println("Issue with title=["
-                                + this.tittle + "] has changed");
+                        System.out.println("Issue with title [" + tittle + "] has changed");
+
+                        return new IssueWrapper(new IssueBuilder()
+                                .title(tittle)
+                                .description(description)
+                                .creator(creator)
+                                .assignUser(assignUser)
+                                .type(type)
+                                .priority(priority));
                     });
                 });
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void addComment(Comment comment) {
+        commentList.add(comment);
+        publish();
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public static class IssueBuilder {
@@ -93,7 +127,7 @@ public class Issue implements Publisher, Subject {
         private IssuePriority priority;
 
 
-        private IssueBuilder() {
+        public IssueBuilder() {
         }
 
         public IssueBuilder title(String title) {
@@ -129,5 +163,19 @@ public class Issue implements Publisher, Subject {
         public Issue build() {
             return new Issue(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Issue{" +
+                "id=" + id +
+                ", tittle='" + tittle + '\'' +
+                ", description='" + description + '\'' +
+                ", creator=" + creator +
+                ", assignUser=" + assignUser +
+                ", type=" + type +
+                ", priority=" + priority +
+                ", commentList=" + commentList +
+                '}';
     }
 }

@@ -3,7 +3,7 @@ package system.issue;
 public enum IssueType {
     CRITICAL("CRITICAL"),
     WORK("WORK"),
-    ANALISIS("ANALYSIS"),
+    ANALYSIS("ANALYSIS"),
     ERROR("ERROR");
 
     private String typeName;
@@ -14,5 +14,12 @@ public enum IssueType {
 
     public String getTypeName() {
         return typeName;
+    }
+
+    @Override
+    public String toString() {
+        return "IssueType{" +
+                "typeName='" + typeName + '\'' +
+                '}';
     }
 }

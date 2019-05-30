@@ -1,2 +1,14 @@
 
-Ysquid:S2094"BRemove this empty class, write its code or make it an "interface".(ƒ¶…‡
+Osquid:S16026",Remove useless curly braces around statement(Ô–¼ãüÿÿÿÿ8 Ñ÷÷®-
+Osquid:S1602]",Remove useless curly braces around statement(²èØíúÿÿÿÿ8¾Öàö®-
+V
+squid:S1067"9Replace this use of System.out or System.err by a logger.(ïä†8 Ñ÷÷®-
+V
+squid:S106:"9Replace this use of System.out or System.err by a logger.(ˆÏí¾8ŠşÙ™¯-
+ squid:S1186‚"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñŠ˜ï8ØÀË›¯-
+Ksquid:S3010"(Remove this assignment of "idGenerator".(À¯ÇÆùÿÿÿÿ8È¡ö®-
+V
+squid:S106L"9Replace this use of System.out or System.err by a logger.(‹Î€å8Øèö®-
+jsquid:UselessImportCheck"?Remove this unused import 'system.commands.interfaces.Command'.(¢ä¿8ª•ı ¯-
+U
+squid:S106_"9Replace this use of System.out or System.err by a logger.(–¶òJ8ĞÜ™¯-

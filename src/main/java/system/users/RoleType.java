@@ -21,4 +21,11 @@ public enum RoleType {
     public int getPermission() {
         return permission;
     }
+
+    @Override
+    public String toString() {
+        return "RoleType{" +
+                "roleName='" + roleName + '\'' +
+                '}';
+    }
 }

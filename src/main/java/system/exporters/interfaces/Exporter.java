@@ -1,7 +1,7 @@
-package system.exporters;
+package system.exporters.interfaces;
 
-public interface Exporter<T,R> {
+public interface Exporter<R,T> {
 
-    R export(T obj);
+    R export(T objectToExport);
 
 }

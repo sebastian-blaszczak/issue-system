@@ -1,8 +1,21 @@
-package system.issue.comments.interfaces;
+package system.issue.comments;
 
-public class FileComment implements Comment {
+import system.users.User;
+
+import java.io.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.logging.Logger;
+
+public class FileComment extends Comment<File, String> {
+    Logger logger = Logger.getLogger("LOG");
+
+    public FileComment(User creator, File commentContent) {
+        super(creator, commentContent);
+    }
+
     @Override
-    public void changeComment(String newComment) {
-        
+    public String getCommentContent() {
+        return null;
     }
 }

@@ -1,0 +1,6 @@
+
+Osquid:S1481",Remove this unused "execute" local variable.(ŞÑ°©üÿÿÿÿ8ÿÁÉ™¯-
+Ssquid:S1191"5Use classes from the Java API instead of Sun classes.(úù²ƒ8êêÃ÷®-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹€ÏÙøÿÿÿÿ8İ©·÷®-
+^squid:S1854";Remove this useless assignment to local variable "execute".(ŞÑ°©üÿÿÿÿ8ÿÁÉ™¯-

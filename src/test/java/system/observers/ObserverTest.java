@@ -53,7 +53,7 @@ public class ObserverTest {
                 .description("Third issue description")
                 .priority(IssuePriority.MED)
                 .title("Third issue title")
-                .type(IssueType.ANALISIS)
+                .type(IssueType.ANALYSIS)
                 .build();
     }
 

@@ -1,0 +1,16 @@
+
+[
+squid:S106#"9Replace this use of System.out or System.err by a logger.(ÑŠÜöøÿÿÿÿ8ä ‚¯-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ØÊñ¼ûÿÿÿÿ8ä ‚¯-
+[
+squid:S106,"9Replace this use of System.out or System.err by a logger.(ü”‚úÿÿÿÿ8‚î„¯-
+[
+squid:S106("9Replace this use of System.out or System.err by a logger.(˜Èûÿÿÿÿ8‚î„¯-
+V
+squid:S1066"9Replace this use of System.out or System.err by a logger.(òÔÇÍ8’ï§Ÿ¯-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(òŒã”şÿÿÿÿ8Ãú¨Ÿ¯-
+[
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ôÉ†ãùÿÿÿÿ8œÄ¯-
+vsquid:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í³ ïüÿÿÿÿ8õş±œ¯-

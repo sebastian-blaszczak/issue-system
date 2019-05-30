@@ -1,6 +1,6 @@
 package system.observers;
 
 @FunctionalInterface
-public interface ObserverMethod {
-    void execute();
+public interface ObserverMethod<T> {
+    T execute();
 }

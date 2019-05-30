@@ -1,0 +1,13 @@
+
+V
+squid:S106'"9Replace this use of System.out or System.err by a logger.(ùŞ«8á“æœ¯-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ê€¦•ûÿÿÿÿ8’š’¯-
+vsquid:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÙÊÚúÿÿÿÿ8É¬³œ¯-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(˜Èûÿÿÿÿ8ö’Ğ›¯-
+Ysquid:UselessImportCheck".Remove this unused import 'system.users.User'.(Ü†íÂ8İóÔ›¯-
+V
+squid:S106+"9Replace this use of System.out or System.err by a logger.(òÔÇÍ8‘åŸ¯-
+[
+squid:S106""9Replace this use of System.out or System.err by a logger.(ü”‚úÿÿÿÿ8ŞöÓ›¯-

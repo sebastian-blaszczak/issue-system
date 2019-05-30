@@ -21,4 +21,11 @@ public enum IssuePriority {
     public String getPriorityName() {
         return priorityName;
     }
+
+    @Override
+    public String toString() {
+        return "IssuePriority{" +
+                "priorityName='" + priorityName + '\'' +
+                '}';
+    }
 }
